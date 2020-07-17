@@ -1,0 +1,71 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0000ff;
+    left: 0;
+    font-size: 1em;
+    z-index: 1001;
+	height: 2.8em;
+}
+#navbar .nav-elem {
+    width: 20%;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4em;
+	line-height: 2em;
+    font-weight: 400;
+    vertical-align: middle;
+    border-radius: 0px 0px 7px 7px;
+	padding: 0;
+}
+#navbar .nav-elem:hover{
+    background-color: #6060ff;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+#navbar .selected {
+    background-color: #6060ff;
+}
+main, footer {
+    background-color: #ffffff;
+}
+h1, .header {
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.sticky-header {
+    position: sticky;
+    top: 1.166em;
+    background-color: #0000ff;
+    color: #ffffff;
+    margin-top: 0px;
+    width: 100%;
+    display: block;
+    z-index: 1000;
+	font-size: 2.4em;
+}
+.logo {
+    /*height: 100%;*/
+    float: left;
+	/*clip-path: circle(47% at center);*/
+    clip-path: circle(1.32em at center);
+    height: 2.8em;
+}
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+/* #spacer {
+    width: 100%;
+	height: 2.8em;
+} */
+footer {
+    text-align: center;
+    font-size: 0.7em;
+}
+p a {
+	color: blue;
+}
+p a:visited {
+	color: purple;
+}

@@ -1,0 +1,42 @@
+<style>
+.carousel {
+	overflow-x: hidden;
+	overflow-y: visible;
+	height: 15em;
+}
+.carousel .w3-col {
+	height: 100%;
+}
+</style>
+<script>
+carouselIdx = 0;
+function setCarousel(idx){
+	if(idx >= {{sponsors|length}}){
+		return;
+	}
+	let carousel = document.getElementById("sponsors");
+	carousel.firstElementChild.className = "w3-col l2 m3 w3-hide-small";
+	carousel.firstElementChild.firstElementChild.style.maxWidth = "100%";
+	carousel.firstElementChild.children[1].style.display = "none";
+	while(carousel.firstElementChild.id != "sponsor-" + idx.toString()){
+		carousel.appendChild(carousel.firstElementChild);
+	}
+	carousel.firstElementChild.className = "w3-col l6 m6 s12";
+	carousel.firstElementChild.firstElementChild.style.maxWidth = "50%";
+	carousel.firstElementChild.children[1].style.display = "";
+	carouselIdx = idx;
+}
+</script>
+<h4>Our Sponsors</h4>
+<div style="width: 100%" class="w3-row carousel" id="sponsors">
+	{% for logo, blurb in sponsors %}
+	<div class="w3-col l2 m3 w3-hide-small" id="sponsor-{{loop.index0}}" onclick="setCarousel({{loop.index0}})">
+		<img src="{{logo}}" style="max-width: 100%; max-height: 100%" />
+		<div style="display: none; width: 50%; float: right; margin-top: 50%; transform: translate(0, -50%)">{{blurb}}</div>
+	</div>
+	{% endfor %}
+</div>
+<script defer>
+setCarousel(0);
+iterator = setInterval(function (){setCarousel((carouselIdx+1)%{{sponsors|length}})}, 7000);
+</script>

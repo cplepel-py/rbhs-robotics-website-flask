@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% set title = "Home" %}
+{% block style %}
+main {
+	padding: 0.5em;
+}
+.content-block h2 {
+	display: inline;
+}
+{% endblock style %}
+{% block main %}
+<h1>RBHS Bionic Bulldogs</h1>
+<h3 class="header">FTC team #12982</h3>
+<div class="w3-row content-block">
+	<h2>About Us</h2>
+	<img src="building.jpg" class="w3-col l3 m6 s12" style="float: right; margin-left: 0.5em" />
+	<p>We are the Bionic Bulldogs, an FTC robotics team from Riverside-Brookfield High School in Riverside, Illinois. The 2019-2020 season was our third year competing in the <a href="https://www.firstinspires.org/robotics/ftc">FIRST Technology Challenge</a>, and we won first place in the Inspire award in the <a href="https://www.firstillinoisrobotics.org/ftc/events/league-info.html?league=chicago-north&season=2019-2020">Chicago-North League</a>. Last year, we placed 5th in our league, and we won the Rookie of the Year award our first year. Each year, we strive to find innovative ideas to create a successful robot, always learning from our mistakes to do better than we did before. Learn more about <a href="robot">our robot for the current season</a> and <a href="members">meet our dedicated team</a>.</p>
+	<p>We also strive to be a positive member of our community, hosting and participating in community events, and taking initiative to improve the community. Last year, we set up a tool library program in our local community, and this year, we plan to create a guide for new FIRST Tech Challenge teams. Learn more about <a href="outreach">our community outreach</a>. Also, be sure to check out our social media on Facebook <a href="https://www.facebook.com/RBHSBionicBulldogs/">@RBHSBionicBulldogs</a> and Twitter <a href="https://twitter.com/rbhsbionic">@rbhsbionic</a>.</p>
+	<p>Of course, we could not be successful without some help, and we are very thankful to <a href="sponsors">our generous sponsors</a>. We also owe much thanks to our coaches, mentors, and parent volunteers, including Mr. Weiss, Mr. and Mrs. Bowen, and Mr. O'Keefe.</p>
+</div>
+<div class="w3-row w3-card content-block" style="margin-top: 1em; margin-bottom: 1em; background-color: #d0e0ff; padding-left: 0.5em">
+	<h2>About FIRST</h2>
+	<div class="w3-col l6 m6 s12" style="float: right; margin-left: 0.5em">
+		<div style="width: 100%; padding-top: 56.28%; position: relative">
+			<!-- width="716" height="403" -->
+			<iframe style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%" src="https://www.youtube.com/embed/mtE6Va6oOhU" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<p>FIRST stands for <i>For Inspiration and Recognition of Science and Technology</i>, and is an international organization dedicated to promoting STEM education and inspiring innovation, through competition and cooperation. The organization promotes its core values of discovery, innovation, impact, inclusion, teamwork, and fun with the philosophy of Coopertition and <a href="https://youtu.be/h2e6gxczMxc">Gracious Professionalism</a>. There are four levels of robotics competitions under the FIRST umbrella, FIRST Lego League Jr. (FLL Jr.), FIRST Lego League (FLL), FIRST Technology Challenge (FTC), and FIRST Robotics Competition (FRC). The Bionic Bulldogs is a competition team participating in the FTC competition, which is open to middle and high school teams. The exciting FTC build and competition season runs from September through April.</p>
+	<p>To learn more about FIRST and its <a href="https://www.firstinspires.org/about/vision-and-mission">mission and philosophy</a>, visit <a href="https://www.firstinspires.org/">www.firstinspires.org</a>.
+</div>
+<div class="w3-row content-block">
+	<h2>2019-2020 Game: Skystone</h2>
+	<div class="w3-col l6 m6 s12" style="float: left; margin-right: 0.5em">
+		<div style="width: 100%; padding-top: 56.28%; position: relative">
+			<iframe style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%" src="https://www.youtube.com/embed/XiGB_8Ppnbs" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<p>The theme of the 2019-2020 FIRST season is FIRST Rise powered by StarWars Force for Change, and the FTC game for the season is Skystone. Skystone is played on FTC's usual 12 foot by 12 foot field of foam tiles, separated, this year, into a quarry and a building zone by a bridge. The goal of Skystone is to move stones from the quarry side of the field to the building side to construct skyscrapers on alliance-specific foundations. Teams can also score points by moving their alliance's foundation both during the autonomous period at the beginning of the game, and during the endgame, once skyscrapers have been constructed. Additionally, there are four special skystones designated by visual markers that are worth extra points when delivered to the building side of the field during the autonomous period. Other ways to score include placing custom-built capstones atop skyscrapers, parking under the alliance bridges at the end of the autonomous period, and parking an alliance's the small, triangular building site at the end of the match. Succeeding in Skystone requires a thoughtful combination of engineering, programming, and strategy, making for an exciting season. For the full official rules of Skystone from FIRST, see part two of the <a href="https://www.firstinspires.org/sites/default/files/uploads/resource_library/ftc/game-manual-part-2.pdf">game manual</a>. <a href="https://www.firstinspires.org/sites/default/files/uploads/resource_library/ftc/game-manual-part-1.pdf">Part one</a> of the game manual details procedures and non-game specific rules regarding the 2019-2020 FIRST Rise FTC season.</p>
+</div>
+{% endblock main %}

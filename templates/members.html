@@ -1,0 +1,59 @@
+{% extends "large_photo.html" %}
+{#
+properties:
+    bios: A sequence of tuples, where the first element is the url to the
+        person's picture, and the second is the person's bio.
+#}
+{% set title = "Members" %}
+{% block style %}
+.bio-container{
+    text-align: center;
+}
+.img-container{
+    width: 80%;
+    height: 100%;
+    position: relative; /* must not be static */
+    display: inline-block;
+}
+.img{
+    opacity: 1;
+    width: 100%;
+    display: block;
+    transition: .5s ease;
+}
+.inner{
+    opacity: 0;
+    transition: .5s ease;
+    /* center in image */
+    position: absolute; /* position relative to first non-static ancestor */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 100%;
+}
+.img-container:hover .img, .img-container:active .img{
+    opacity: 0.3;
+}
+.img-container:hover .inner, .img-container:active .inner{
+    opacity: 1;
+}
+.txt {
+    text-align: center;
+}
+{% endblock style %}
+{% block main %}
+<h1 class="sticky-header">Meet the Bionic Bulldogs</h1>
+		<div class="w3-row">
+    {% for bio in bios %}
+			<div class="bio-container w3-col l4 m6 s12">
+				<div class="img-container">
+					<img src="{{ bio[0] }}" class="img" />
+					<div class="inner"><div class="txt">{{ bio[1] }}</div></div>
+				</div>
+			</div>
+		{# {% if loop.index is divisibleby 3 %}</div>{% endif %} #}
+    {% endfor %}
+	</div>
+{% endblock main %}
+{% set head_photo = 'StateQualifierTeamPhoto.jpg' %}
+{% set ratio = 56.6 %}

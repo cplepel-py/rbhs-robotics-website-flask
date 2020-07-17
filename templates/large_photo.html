@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{# properties:
+    head_photo: A string, the url to the header photo.
+    ratio: An integet, the height of the photo as a percent of its width.
+#}
+{% block head %}
+<style>
+    body {
+        background-image: url({{ head_photo }});
+        background-position: 0em 2.8em;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+    #spacer {
+		width: 100%;
+        height: calc(100vh - 3.6em - 2.8em);
+        display: block;
+        max-height: {{ratio}}vw;
+    }
+    {% block style %}
+    {% endblock style %}
+</style>
+{% endblock head %}
+{% block body %}
+<div style="margin-top: 2.8em">
+	<div id="spacer"></div>
+	<main>
+	{% block main %}
+	{% endblock main%}
+	</main>
+</div>
+{% endblock body %}

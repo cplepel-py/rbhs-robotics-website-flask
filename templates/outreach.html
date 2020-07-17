@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% set title = "Outreach" %}
+{% block head %}
+<style>
+main {
+	padding: 0.5em;
+}
+.fa {
+	height: 1em;
+	width: 1em;
+	font-size: 1.5em !important;
+	text-align: center;
+	border-radius: 25%;
+}
+.fa-facebook {
+	background-color: #3B5998;
+	color: white;
+}
+.fa-twitter {
+	background-color: #55ACEE;
+	color: white;
+}
+.caption {
+	font-size: 0.8em;
+}
+.summary-header {
+	display: inline-block;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+{% endblock head %}
+{% block main %}
+<h1>Outreach</h1>
+<h3 class="header">Engaging our Community with STEM</h3>
+<div class="w3-row">
+<div class="w3-col l3 m6 s12 w3-card" style="float: right; margin-left: 0.5em; border-radius: 1em; padding-bottom: 0.5em">
+	<h4 style="margin-top: 0; background-color: blue; color: white; text-align: center; border-top-left-radius: 0.67em; border-top-right-radius: 0.67em; padding-bottom: 0.5em">Stay Up-to-Date with our Community Engagement</h4>
+	<p style="margin-top: 0; margin-bottom: 0.5em">Follow us on Facebook and Twitter</p>
+	<i class="fa fa-facebook"></i><a href="https://www.facebook.com/RBHSBionicBulldogs/">@RBHSBionicBulldogs</a><br/>
+	<i class="fa fa-twitter"></i><a href="https://twitter.com/rbhsbionic">@rbhsbionic</a>
+</div>
+<p>The Bionic Bulldogs strive to be a positive member of our local, FTC, and global community. Each summer, we try to make a positive impact through a summer project. Last year, we created a tool library program at a number of our local libraries, hosting a tool drive in August to collect tools for the program. This year, we intended to help new members of our FTC community by working with FIRST Illinois to create a guide for new FTC teams to get up and running more quickly. While COVID-19 disrupted these plans, we sought out other ways to be useful, supporting the <a href="https://foldingathome.org/">Folding@Home</a> initiative to help researchers in the fight against COVID-19 and other diseases, creating a Bionic Bulldogs Folding@Home team, #256777.</p>
+<details class="w3-row" open>
+	<summary><h2 class="summary-header">2019 Summer Project - Tool Library and Tool Drive</h2></summary>
+	<div class="w3-col l3 m6 s12" style="float: right; margin-left: 0.5em">
+		<img src="tools.jpg" style="width: 100%" alt="Tools collected at our tool drive." />
+		<span class="caption">Tools collected at the tool drive</span>
+	</div>
+	<p>Last summer, the we worked to set up tool library programs in a number of our local libraries, including the <a href="https://www.riversidelibrary.org/">Riverside Public Library</a>, the <a href="http://www.northriversidelibrary.org/">North Riverside Public Library</a>, and the <a href="https://www.brookfieldlibrary.info/">Brookfield Public Library</a>. To collect tools for the new tool library program, we hosted a tool drive on August 31st, where we collected tool donations, held a bake sale, and engaged the community with various STEM activities. Among the most popular STEM activities was the Maky-Maky, where members of the community could use conductive fruits, vegetables, and aluminum foil to play games like snake and the slope game, while learning about circuits. One team member also ran a very popular face-painting station. Through this event, we collected an extraordinary number and variety of tools, as well as over $300 from the bake sale.</p>
+	<div class="w3-col l3 m6 s12" style="float: left">
+		<img src="tool-sorting.jpg" style="width: 100%" alt="Sorting collected Tools" />
+		<span class="caption">Sorting some of the tools collected at the tool drive</span>
+	</div>
+	<div class="w3-col l6 m6 s12" style="float: left; margin-right: -0.5em">
+		<img src="tool-sorting2.jpg" style="width: 100%" alt="Tools being sorted" />
+		<span class="caption">Tools being sorted after the tool drive</span>
+	</div>
+</details>
+<details class="w3-col l6 m12 s12 w3-row" style="padding: 0.5em" open>
+	<summary><h2 class="summary-header">Color Run</h2></summary>
+	<p class="w3-col l6 m12 s12">Each year, the Bionic Bulldogs robotics team supports our local community's Color Run. This year, one of our members created a color cannon for the run to launch the color run's signature paint at the runners.</p>
+	<div class="w3-col l6 m12 s12">
+		<video src="color-cannon.mp4" poster="color-cannon-poster.jpg" style="width: 100%" controls></video>
+		<span class="caption">Zach explains the color cannon he built for the Color Run</span>
+	</div>
+</details>
+<details class="w3-col l6 m12 s12 w3-row" style="padding: 0.5em" open>
+	<summary><h2 class="summary-header">STEM at the Library</h2></summary>
+	<p class="w3-col l6 m12 s12">Two of our local libraries, the Brookfield Public Library and the Riverside Public Library, host annual community STEM events, and we participated in both this past year. Both events allowed us to bring STEM to a diverse audience united by a curiosity in science, technology, engineering, and math. At the Riverside Library, we brought STEM to the community by presenting our robot and presenting the popular Maky-Maky device to visitors of the library's event. At the Brookfield Library's annual STEAM fest, we presented our robot and answered questions about our team and FIRST robotics. We also demonstrated and explained the science behind the color cannon one of our members made for the local color run. Additionally, the community learned about STEM topics through educational activities like the ones we presented at our tool drive.</p>
+	<div class="w3-col l6 m12 s12">
+		<img src="library.jpg" style="width: 100%" alt="The Maky-Maky at the Riverside Library" />
+		<span class="caption">The Maky-Maky at the Riverside Library</span>
+	</div>
+	<div class="w3-col l12 m12 s12">
+		<img src="library2.jpg" style="width: 100%" alt="The Bionic Bulldogs at the Riverside Library" />
+		<span class="caption">The Bionic Bulldogs at the Riverside Library</span>
+	</div>
+</details>
+</div>
+{% endblock main %}

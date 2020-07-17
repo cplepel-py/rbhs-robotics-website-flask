@@ -1,0 +1,47 @@
+{#
+properties:
+    title: A string, the title of this page.
+blocks:
+    head: header tags.
+    style: CSS styling, contained in `head`.
+    body: body tags.
+    spacer: content of the spacer div, contained in `body`.
+    main: main content tags, contained in `body`.
+#}
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>{{ title.title() }} | RBHS Bionic Bulldogs 12982</title>
+            <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+            <link rel="stylesheet" href="{{url_for('static', filename='global.css')}}" />
+            {% block head %}
+            <style>
+                {% block style %}
+                {% endblock style %}
+            </style>
+            {% endblock head %}
+        </head>
+        <body>
+            <div id="navbar" class="w3-bar">
+                <a href="/"><img src="logo.png" class="logo" /></a>
+                <div class="w3-bar" style="width: auto">
+					<a class="w3-bar-item nav-elem{{' selected' if title.lower() == 'home' else ''}}" href="/">Home</a>
+					<a class="w3-bar-item nav-elem{{' selected' if title.lower() == 'members' else ''}}" href="members">Members</a>
+					<a class="w3-bar-item nav-elem{{' selected' if title.lower() == 'our robot' else ''}}" href="robot">Our Robot</a>
+					<a class="w3-bar-item nav-elem{{' selected' if title.lower() == 'sponsors' else ''}}" href="sponsors">Sponsors</a>
+					<a class="w3-bar-item nav-elem{{' selected' if title.lower() == 'outreach' else ''}}" href="outreach">Outreach</a>
+				</div>
+            </div>
+            {% block body %}
+            <!-- <div id="spacer">{% block spacer %}{% endblock spacer %}</div> -->
+            <main style="margin-top: 2.8em">
+                {% block main %}
+                {% endblock main%}
+            </main>
+            {% endblock body %}
+			<footer style="padding-bottom: 1em">
+				Created by FTC team #12982
+			</footer>
+        </body>
+    </html>

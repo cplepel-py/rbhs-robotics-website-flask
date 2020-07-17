@@ -1,0 +1,38 @@
+{% extends "large_photo.html" %}
+{% set title = "Our Robot" %}
+{% block main %}
+<h1 class="sticky-header">Our Robot</h1>
+<div class="w3-row" style="padding: 0.5em">
+<p>A system is more than the sum of its parts, and we strive to use our mechanical, programming, and strategic ingenuity to implement efficient solutions to the challenges posed by each year's game.</p>
+<img src="gear-ratio.jpg" class="w3-col l3 m6 s12" style="float: right; margin-left: 0.5em" />
+<h2>The Base</h2>
+<p>For our base, we use two parallel drive systems connected by two cross bars in the center of the robot. This tested design gives durability and allows us to mount systems to the middle and lateral sides of the robot, providing stability, while also creating a concave area ideal for a variety of object manipulators. We use standard mecanum wheels, allowing onmidirectional movement, and our drive system is geared for strength, providing the torque to move heavy objects.</p>
+<p>In addition to the base, our robot has a side panel used to mount our REV expansion hubs, robot controller phone, and other electronics. To allow us to mount everything in the most efficient configuration, we used our new X-Carve to mill the panel to the correct size and added the necessary holes. We also took the opportunity to customize our robot with logos and our team number.</p>
+
+<h2>The Arm and Claw</h2>
+<p>For the 2019-2020 Skystone season, we used a simple and reliable 4-bar lifting mechanism for our arm, reinforced with a spring. Attached to this, we used a claw designed to open vertically, which grips stones using a custom-milled plate for the optimal contact surface area. This was the result of several iterations of claws, including one with a cylindrical grip, intended to be invariant to the angle of the claw.</p>
+
+<img src="tape.jpg" class="w3-col l3 m6 s12" style="float: left; margin-right: 0.5em" />
+<h2>Moving the Foundation</h2>
+<p>The best solutions are sometimes the simplest, and our mechanical fingers for moving the foundation are no exception. Two short metal plates mounted to high-torque servos on the back of the robot proved a reliable method for us to move the foundation in both the autonomous period and the endgame.</p>
+
+<h2>A Measured Approach</h2>
+<p>Possibly the most creative mechanical solution we found for the 2019-2020 Skystone game was for parking. Inspired by a comment made by a referee at an earlier competition, we mounted a tape measurer to the back of our robot, along with a simple flywheel to bring the tape in and out. At the end of the game, we can extend the tape over the foundation to break the plane of the building site, "parking" while leaving plenty of room for our ally&mdash;all while moving the foundation out with out mechanical fingers.</p>
+
+<h2>Scoring our Capstone</h2>
+<p>Our Capstone is a weighted cardboard box designed to potentially fit on one of the game's stones. To release the Capstone from its starting position on our robot, a simple hooked lever drops the Capstone onto the foundation for a useful bonus in the endgame. If anything goes wrong, the capstone is also large enough to be manipulated by our arm and claw.</p>
+</div>
+<div class="w3-row" style="padding: 0.5em">
+<video src="auton.mp4" poster="auton-poster.jpg" class="w3-col l3 m6 s12" style="float: right; margin-left: 0.5em" controls></video>
+<h2>Autonomous</h2>
+<p>To ensure we can score well while working with our alliance's strengths in autonomous, we created several autonomous routes for the 2019-2020 season, scoring in a variety of ways, from simply parking, to moving the foundation, and even delivering a Skystone. Additionally, we have designed autonomous programs for starting in each quadrant of the field. Here is an overview of our main autonomous approaches. All of our autonomous and driver control code is available on our <a href="https://github.com/IsaacRatliff/FTC-Code">GitHub repository</a>. All of these autonomous programs are built using a <a href="https://github.com/IsaacRatliff/FTC-Code/blob/master/AutoOp.java">custom base class</a> acting as an interface to the physical robot, abstracting some of the repetitive details of autonomous motion, promoting readability, and streamlining the autonomous development process.</p>
+<h3>Moving the foundation</h3>
+<p>Using our fingers, we reliable rotate the foundation into the building site before parking under the alliance bridge, either near the center of the field or against the outer wall. This route works from either of two starting positions, on either side of the alliance bridge, for a consistent 15 points.<br/>
+<a href="https://github.com/IsaacRatliff/FTC-Code/blob/master/RepoRedFarB.java">See the code on GitHub</a></p>
+<h3>Delivering Skystones</h3>
+<p>We use the Vuforia library, along with a webcam mounted on the front of the robot, to scan the quarry and locate a skystone. Once the skystone is located, the robot grabs it with the claw, delivers the skystone to the build side of the field, and extends the tape measurer to park over the center tape line for a total of 15 points.<br/>
+<a href="https://github.com/IsaacRatliff/FTC-Code/blob/master/VuforiaRed.java">See the code on GitHub</a></p>
+</div>
+{% endblock main %}
+{% set head_photo = 'working.jpg' %}
+{% set ratio = 56.2 %}
